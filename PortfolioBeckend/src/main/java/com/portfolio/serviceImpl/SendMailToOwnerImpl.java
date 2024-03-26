@@ -22,8 +22,9 @@ public class SendMailToOwnerImpl implements SendMailToOwner {
 	@Override
 	public void sendMail(ContactMe contactDetails) {
 		
-		final String username="hannanshaikh150@gmail.com";
-		final String password="yoyo.honey@";
+		System.out.println(contactDetails);
+		final String username="hannanshaikh150";
+        final String password="eviqxqdfpzzzvxgj";
 		
 		//Setting up the mail properties
 		Properties props = new Properties();
@@ -33,9 +34,9 @@ public class SendMailToOwnerImpl implements SendMailToOwner {
 		props.put("mail.smtp.port",587);
 		
 		
-		Session session = Session.getInstance(props,
+		Session session = Session.getDefaultInstance(props,
 				new Authenticator() {
-				protected PasswordAuthentication passwordAuthentication() {
+				protected PasswordAuthentication getPasswordAuthentication() {
 					return new PasswordAuthentication(username, password);};
 				}
 				);
