@@ -4,5 +4,5 @@ import com.portfolio.entities.ContactMe;
 
 public interface SendMailToOwner {
 
-	public boolean sendMail(ContactMe contactDetails);
+	public void sendMail(ContactMe contactDetails);
 }

@@ -14,6 +14,6 @@ import lombok.Setter;
 public class ContactMe {
 	private String name;
 	private String email;
-	private String projectName;
+	private String subject;
 	private String message;
 }
